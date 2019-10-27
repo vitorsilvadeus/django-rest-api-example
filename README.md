@@ -4,14 +4,14 @@ A simple example of a Django REST API <br>
 METHOD: GET<br>
 <br>
 Query params:<br>
-  lists:<br>
-     -> channels,<br> 
-     ->countries, <br>
-     ->os, <br>
-     ->fields(any fields of the Performance model to be listed in the response plus the cpi i.e spends/installs)),<br>
-     ->group_by(fields to group query by (only fields listed in fields list),<br>
-     ->order_by (fields do order by(preced by '-' for descending order)))<br>
-  uniques:<br>
-     ->date_from (for the data field in the '%Y-%m-%d' format),<br>
-     ->date_to (for the data field in the '%Y-%m-%d' format)<br>
+  &nbsp;lists:<br>
+     &nbsp;&nbsp-> channels,<br> 
+     &nbsp;&nbsp;->countries, <br>
+     &nbsp;&nbsp;->os, <br>
+     &nbsp;&nbsp;->fields(any fields of the Performance model to be listed in the response plus the cpi i.e spends/installs)),<br>
+     &nbsp;&nbsp;->group_by(fields to group query by (only fields listed in fields list),<br>
+     &nbsp;&nbsp;->order_by (fields do order by(preced by '-' for descending order)))<br>
+  &nbsp;uniques:<br>
+     &nbsp;&nbsp;->date_from (for the data field in the '%Y-%m-%d' format),<br>
+     &nbsp;&nbsp;->date_to (for the data field in the '%Y-%m-%d' format)<br>
     
