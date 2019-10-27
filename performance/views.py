@@ -6,13 +6,17 @@ from datetime import datetime
 
 
 # TEST URL:
-# /?date_from=2017-05-17&date_to=2017-05-17&fields=date&fields=cpi&fields=os&fields=channel&fields=clicks&group_by=os&group_by=channel&group_by=country&order_by=-os&order_by=channel
+# ?date_from=2017-05-17&date_to=2017-05-17&fields=date&fields=cpi&fields=os&fields=channel&fields=clicks&group_by=os&group_by=channel&order_by=-os&order_by=channel
 # SQL:
 # SELECT date,os,channel,SUM(spend / installs) AS cpi,SUM(clicks) AS clicks
 # FROM performance_performance
 # WHERE date >= '2017-05-17' AND date <= '2017-05-17'
 # GROUP BY date,os,channel
 # ORDER BY channel ,os DESC
+
+
+'''API endpoint, which is capable of filtering, grouping and sorting. Dataset represents performance metrics (impressions, clicks,
+ installs, spend, revenue) for a given date, advertising channel, country and operating system'''
 
 class PerformanceAPIView(APIView):
 
@@ -45,7 +49,7 @@ class PerformanceAPIView(APIView):
 
         os = query_data.get('os',None)
         if countries is not None :
-            p = p.filter(os__in=countries)
+            p = p.filter(os__in=os)
 
         # ->Two annotate calls in order to achieve cpi calc due
         # to the fact that annonate on same field in same
