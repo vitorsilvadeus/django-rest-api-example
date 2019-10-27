@@ -81,11 +81,11 @@ DATABASES = {
         'NAME': 'performances',
         'HOST': '127.0.0.1',
         'PORT': '5432',
-        'USER': 'adjust',
-        'PASSWORD': 'adjust'
+        'USER': os.environ.get("PERFORMANCE_DB_USER"),
+        'PASSWORD': os.environ.get("PERFORMANCE_DB_PWD")
     },
 }
-# os.environ.get("")
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
