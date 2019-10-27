@@ -4,8 +4,8 @@ A simple example of a Django REST API <br>
 METHOD: GET<br>
 <br>
 Query params:<br>
-  &nbsp;lists:<br>
-     &nbsp;&nbsp-> channels,<br> 
+  &nbsp; lists:<br>
+     &nbsp;&nbsp;-> channels,<br> 
      &nbsp;&nbsp;->countries, <br>
      &nbsp;&nbsp;->os, <br>
      &nbsp;&nbsp;->fields(any fields of the Performance model to be listed in the response plus the cpi i.e spends/installs)),<br>
